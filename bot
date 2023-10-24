@@ -17,13 +17,13 @@ def start(update, context):
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
 
-# Define a message handler function
+# Define a message handler function,
 def echo(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=update.message.text)
 
-# Register the message handler
+# Register the message handler.
 echo_handler = MessageHandler(Filters.text & (~Filters.command), echo)
-dispatcher.add_handler(echo_handler)
+dispatcher.add_handler
 
 # Start the bot
 updater.start_polling()
